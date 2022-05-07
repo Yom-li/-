@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./page.js"></script>
+    <title>Fuel cell digital twin</title>
+
+    <!-- Loading third party fonts -->
+    <link rel="stylesheet" type="text/css" href="./page.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <div class="headline">
+        <span class="span">gdl_mpl_a</span>
+        <span>      </span>
+        <span class="span" >gdl_mpl_c</span>
+    </div>-->
+    <div class="site-content">
+        <header class="site-header" data-bg-image="">
+            <div class="container">
+                <div class="header-bar">
+                    <a href="index.html" class="branding">
+                        <img src="images/logo.png" alt="" class="logo">
+                        <div class="logo-type">
+                            <h1 class="site-title">Fuel cell digital twin </h1>
+                            <small class="site-description">Electrochemical Thermalphysics Laboratory <br>Tianjin University</small>
+                        </div>
+                    </a>
+
+                    <nav class="main-navigation">
+                        <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                        <ul class="menu">
+                            <li class="home menu-item">
+                                <a href="index.html"><img src="images/home-icon.png" alt="Home"></a>
+                            </li>
+
+                            <li class="menu-item current-menu-item"><a href="page.html">virtual lab</a></li>
+                            <li class="menu-item"><a href="about.html">fuel cell introduction</a></li>
+                            <!-- <li class="menu-item"><a href="services.html">application</a></li>
+                         <li class="menu-item"><a href="projects.html">Our projecs</a></li>-->
+
+                        </ul>
+                    </nav>
+
+                    <div class="mobile-navigation"></div>
+                </div>
+            </div>
+        </header>
+
+    </div>
+    <div class="body_blank">
+        <div class="draw_declare">
+            <h2>
+                <br> <br><br>Welcome to the Virtual Lab!
+            </h2>
+            <p class="p_size21">
+
+                You can draw cloud maps in the drawing area below. Before drawing, please set the parameters in the correct ranges.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="body_right">
+        <div class="line_right">
+            <div class="text">
+                &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp Output Voltage (0.35~0.75) &nbsp&nbsp&nbsp
+            </div>
+
+            <input value="0.35" id="input_1" class="input" />
+        </div>
+        <div class="line_right">
+            <div class="text">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Back Pressure (1.0~2.2)&nbsp &nbsp &nbsp &nbsp &nbsp
+            </div>
+            <input value="1.0" id="input_2" class="input" />
+        </div>
+        <div class="line_right">
+            <div class="text">
+                Anode stoichiometry ratio(1.2~1.6) &nbsp&nbsp
+            </div>
+            <input value="1.2" id="input_3" class="input" />
+        </div>
+
+
+    </div>
+    <div class=secondline>
+        <div class="line_right">
+            <div class="text">
+                Cathode stoichiometry ratio (1.6~2.4)&nbsp&nbsp&nbsp
+            </div>
+            <input value="1.6" id="input_4" class="input" />
+        </div>
+
+        <div class="line_right">
+            <div class="text">
+                Anode relative humidity (0.5~1.0)&nbsp&nbsp
+            </div>
+            <input value="0.5" id="input_5" class="input" />
+        </div>
+
+        <div class="line_right">
+            <div class="text">
+                Cathode relative humidity (0.5~1.0)&nbsp&nbsp
+            </div>
+            <input value="0.5" id="input_6" class="input" />
+        </div>
+    </div>
+    <div class="button_container">
+
+        <button onclick="draw_h2()" class="button_draw">Hydrogen Plot </button>
+        <button onclick="draw_rh()" class="button_draw">Humidity Plot</button>
+        <button onclick="draw_t()" class="button_draw">Temprature Plot</button>
+        <button onclick="clear_data()" class="button_draw">Clear</button>
+    </div>
+    <div class="body_left">
+        <div id="pic" style="height: 95%;margin-top: 10px;margin-right: 2%;margin-left: 2%;"></div>
+
+    </div>
+
+
+    <div class="fullwidth-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="section-title">Explanation of the picture</h2>
+                    <p class="p_size1">
+                        We input 6 variables as a set of parameters, which can draw two-dimensional cloud maps of different physical quantities. The horizontal axis is the long side and the vertical axis is the wide side. This flow channel is parallel, the left end is the entrance
+                        and the right end is the exit. Taking the distribution of hydrogen as an example: the closer to the inlet, the concentration of hydrogen is higher, and the closer to the exit, the lower the concentration of hydrogen.
+
+                    </p>
+                    <br>
+                    <h2 class="section-title">More </h2>
+                    <p class="p_size1">
+                        Our platform is currently being improved, and its functions are still very limited. We will continue to update the platform to enable it to guide scientific research. Please continue to pay attention to our platform. Correction is welcome if there is
+                        any error. <br>&nbsp&nbsp &nbsp&nbsp&nbsp Our E-mails:
+                        <br> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp kjiao@tju.edu.cn
+                        <br> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp wangbw94@tju.edu.cn
+                        <br> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp lincai_li@tju.edu.cn
+                    </p>
+                </div>
+
+
+                <p class="p_size1">
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <p>This page was updated on April 9, 2021</p>
+
+</body>
+
+</html>

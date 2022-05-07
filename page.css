@@ -1,0 +1,107 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.headline {
+    width: 120%;
+    margin: -10px;
+    background-color: white;
+    border: 1px solid;
+}
+
+.span {
+    font-size: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.body_left {
+    width: 98%;
+    height: 500px;
+    /* background-color: aqua; */
+    /*float: left;*/
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+    border-radius: 1%;
+    margin-left: 1%;
+}
+
+.body_blank {
+    height: 200px;
+    width: 100%;
+}
+
+.body_right {
+    width: 100%;
+    height: 80px;
+    /* background-color: blueviolet; */
+    /*float: right;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.secondline {
+    width: 100%;
+    height: 80px;
+    /* background-color: blueviolet; */
+    /*float: right;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.line_right {
+    /*width: 80%;*/
+    align-items: center;
+}
+
+.text {
+    float: left;
+    text-align: center;
+    color: #000;
+    font-family: "Arial";
+}
+
+.input {
+    /*float: right;*/
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    margin-left: 20 px;
+}
+
+.image {
+    width: 90%;
+    margin: 5%;
+}
+
+.button_container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button_draw {
+    width: 100px;
+    height: 40px;
+    font-family: "Arial";
+}
+
+.draw_declare {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.picture_name {
+    left: 50px;
+    bottom: 10px;
+}
